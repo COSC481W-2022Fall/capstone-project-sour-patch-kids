@@ -5,6 +5,7 @@ import { BrowserRouter as Redirect, Route, Switch } from "react-router-dom";
 import Home from "./Pages/Home";
 import Helpme from "./Pages/ListOfUsers";
 import UserLogin from "./Pages/login";
+import AddOrgUser from "./Pages/AddOrgUser";
 import React from "react";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Switch>
           <Route path="/login" component={UserLogin} />
           <Route path="/list" component={Helpme} />
+          <Route path="/addOrgUser" component={AddOrgUser} />
           <Route path="/" component={Home} />
           <Redirect from="*" to="/" />
         </Switch>
