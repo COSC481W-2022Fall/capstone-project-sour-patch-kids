@@ -82,16 +82,12 @@
   color: rgb(172, 82, 236);
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
+
 .userDiv p {
   color: rgb(255, 255, 255);
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 45px;
   text-align: center;
-}
-
-.imgDiv {
-  width: 75px;
-  height: 150px;
 }
 
 @keyframes smoothScale {
