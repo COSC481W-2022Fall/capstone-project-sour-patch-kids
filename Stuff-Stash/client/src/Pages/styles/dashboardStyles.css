@@ -24,9 +24,8 @@
 
 .userDisplay {
   background-color: rgb(180, 180, 180);
-  width: 300px;
-  height: 250px;
-  padding: 1rem;
+  width: fit-content;
+  padding: 5px;
   margin-bottom: 1rem;
   border-radius: 10px;
 }
@@ -88,6 +87,8 @@
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 45px;
   text-align: center;
+  white-space: wrap;
+  overflow: hidden;
 }
 
 @keyframes smoothScale {
