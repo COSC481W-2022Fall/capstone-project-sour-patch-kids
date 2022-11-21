@@ -24,8 +24,9 @@
 
 .userDisplay {
   background-color: rgb(180, 180, 180);
-  width: fit-content;
-  padding: 5px;
+  width: 300px;
+  height: 250px;
+  padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 10px;
 }
@@ -85,10 +86,9 @@
 .userDiv p {
   color: rgb(255, 255, 255);
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 45px;
+  font-size: fit-content;
   text-align: center;
-  white-space: wrap;
-  overflow: hidden;
+  overflow-wrap: auto;
 }
 
 @keyframes smoothScale {
