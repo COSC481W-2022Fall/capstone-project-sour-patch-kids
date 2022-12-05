@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactSession } from "react-client-session";
+import "../components/styles/assetCard.css";
 var name ="";
 var serialCode ="";
 var availability ="";
@@ -7,10 +8,25 @@ var category ="";
 var condition ="";
 var warranty ="";
 
+// console.log("your oldname is" +oldname);
+// var oldAvaibility=ReactSession.get("avaibility");
+// var oldSerial =ReactSession.get("serial");
+// var oldCondition =ReactSession.get("condition");
+
+
+
 
 
 
 const UpdateForm = () => {
+  var oldname = ReactSession.get("identiferName").toString();
+  var oldAvailability= ReactSession.get("avaibility");
+  var olsSerial= ReactSession.get("serialcode");
+  var oldCategory = ReactSession.get("category");
+  var oldWarranty= ReactSession.get("warranty");
+  var oldCondition= ReactSession.get("condition");
+
+
 
   const setNewName= (e) => {
     name = e.target.value;
@@ -67,43 +83,43 @@ const UpdateForm = () => {
    };
   return (
     <form onSubmit="{update}">
-      <div class="form-group m-3">
+      <div class="form-group m-3 black" >
         <label for="Name" >Name : </label>
-        <input onChange={setNewName}/>
+        <input name="name" id="name"onChange={setNewName}  defaultValue={oldname}/>
       </div>
-      <div class="form-group m-3">
+      <div class="form-group m-3 black">
         <label for="Serial Code">Serial Code : </label>
-        <input onChange={setNewSerialCode}/>
+        <input onChange={setNewSerialCode} value={olsSerial}/>
       </div>
-      <div class="form-group m-3">
+      <div class="form-group m-3 black">
         <label for="avail">Availability :</label>
-        <input onChange={setNewAvailabity}/>
+        <input onChange={setNewAvailabity} value={oldAvailability}/>
       </div>
 
-      <div class="form-group m-3">
+      <div class="form-group m-3 black">
         <label class="form-label" for="asset info">
-          Asset Info :
+          Category :
         </label>
-        <input onChange={setCategory}/>
+        <input onChange={setCategory} value={oldCategory}/>
       </div>
-      <div class="form-group m-3">
+      <div class="form-group m-3 black">
         <label for="condition">Condition :</label>
-        <select name="condition" id="condition" onChange={setCondition}>
+        <select name="condition" id="condition" onChange={setCondition} value={oldCondition}>
           <option>Select Value</option>
           <option value="new">New</option>
           <option value="used">Used</option>
           <option value="poor">Poor</option>
         </select>
       </div>
-      <div class="form-group m-3">
+      <div class="form-group m-3 black" >
         <label for="WarrDate">Warranty Date :</label>
-        <input onChange={setWarranty}/>
-      </div>
+        <input onChange={setWarranty} value={oldWarranty}/>
       <div className="text-center">
         <button className="btn btn-primary m-3 " onClick={update}>
           Confirm{" "}
         </button>
-      </div>
+      </div></div>
+      
     </form>
   );
 };

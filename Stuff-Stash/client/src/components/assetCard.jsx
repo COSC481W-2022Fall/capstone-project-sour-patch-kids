@@ -8,6 +8,12 @@ const Assetcard = (props) => {
   var stockroom=ReactSession.get("selectedStockroom");
   var identifier =props.name;
   ReactSession.set("identiferName", identifier);
+   ReactSession.set("avaibility", props.avail);
+   ReactSession.set("serialcode", props.serialCode);
+   ReactSession.set("category", props.category);
+   ReactSession.set("warranty", props.date);
+   ReactSession.set("condition", props.cond);
+
   
   function test() {
     return (

@@ -180,7 +180,7 @@ const StockRoomViewDashboard = ({orgName}) => {
                       onClick={deleteStockroom} 
                       type="hidden" 
                       hidden={true}>
-                    Delete
+                    Delete Stockroom
                   </button>
                 </div>
               );

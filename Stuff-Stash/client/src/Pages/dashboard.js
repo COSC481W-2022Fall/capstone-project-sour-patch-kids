@@ -31,6 +31,7 @@ const username = ReactSession.get("username");
 //console.log(currentOrg);
 
 class Dashboard extends Component {
+
   constructor(props)
   {
     super(props);
@@ -97,7 +98,7 @@ class Dashboard extends Component {
         {/** COL 2 -- RIGHT SIDE */}
         <div className="container-fluid rightDisplay col">
           <div className="stckRoomDisplay justify-content-center">
-            <span className="display-3">Current Stockrooms {this.state.org}</span>
+            <span className="display-3">Current Stockrooms in: {this.state.org}</span>
             {/** Div for displaying stockrooms of org when org button or link is clicked*/}
             <ul className="stockroom-list list-group list-group-flush">
             <StockRoomViewDashboard orgName={this.state.org} />
